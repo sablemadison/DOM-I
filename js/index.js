@@ -8,6 +8,8 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
+ 
+
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
@@ -40,3 +42,5 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+const navi = document.querySelectorAll('.nav');
+const cta = document.querySelector
