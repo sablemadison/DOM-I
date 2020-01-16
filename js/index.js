@@ -22,7 +22,7 @@ const siteContent = {
     "services-h4":"Services",
     "services-content": "Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "product-h4":"Product",
-    "product-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
+    "services-content": "Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
     "vision-h4":"Vision",
     "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
   },
@@ -43,3 +43,58 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let codeSnip = document.getElementById('cta-img')
 codeSnip.src = "img/header-img.png"
+
+ nav = document.querySelectorAll('a')
+  
+nav[0].textContent = siteContent['nav']['nav-item-1']
+nav[1].textContent = siteContent['nav']['nav-item-2']
+nav[2].textContent = siteContent['nav']['nav-item-4']
+nav[3].textContent = siteContent['nav']['nav-item-4']
+nav[4].textContent = siteContent['nav']['nav-item-5']
+nav[5].textContent = siteContent['nav']['nav-item-6']
+
+// let sab = document.createElement('a')
+// let chi = document.createElement('a')
+// sab.textContent = "Sable"
+// chi.textContent = "Childs"
+// nav[5].prepend(sab)
+// nav[6].appendChild(chi)
+
+nav.forEach(item => {item.style.color = 'green'})
+console.log(nav)
+let h1 = document.querySelector('h1')
+h1.textContent = siteContent.cta.h1
+
+let button = document.querySelector('button')
+button.textContent = siteContent.cta.button
+
+let img2 = document.querySelector('.logo')
+img2.src = siteContent['nav']['img-src']
+
+let h4s = document.querySelectorAll('h4')
+
+h4s[0].textContent = siteContent['main-content']['features-h4']
+
+h4s[1].textContent = siteContent['main-content']['about-h4']
+h4s[2].textContent = siteContent['main-content']['services-h4']
+h4s[3].textContent = siteContent['main-content']['product-h4']
+h4s[4].textContent = siteContent['main-content']['vision-h4']
+h4s[5].textContent = siteContent['main-content']['contact-h4']
+
+let ps = document.querySelectorAll('p')
+ps[0].textContent = siteContent['main-content']['features-content']
+ps[1].textContent = siteContent['main-content']['about-content']
+ps[2].textContent = siteContent['main-content']['services-content']
+ps[3].textContent = siteContent['main-content']['product-content']
+ps[4].textContent = siteContent['main-content']['vision-content']
+
+ps[5].textContent = siteContent['contact']['address']
+ps[6].textContent = siteContent['contact']['phone']
+ps[7].textContent = siteContent['contact']['email']
+
+let footer = document.querySelector('footer')
+footer.textContent = siteContent['footer']['copyright']
+
+let midImg = document.querySelector('#middle-img')
+
+midImg.src = siteContent['main-content']['middle-img-src']
