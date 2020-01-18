@@ -44,7 +44,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let codeSnip = document.getElementById('cta-img')
 codeSnip.src = "img/header-img.png"
 
- nav = document.querySelectorAll('a')
+ let nav = document.querySelectorAll('a')
   
 nav[0].textContent = siteContent['nav']['nav-item-1']
 nav[1].textContent = siteContent['nav']['nav-item-2']
@@ -53,12 +53,7 @@ nav[3].textContent = siteContent['nav']['nav-item-4']
 nav[4].textContent = siteContent['nav']['nav-item-5']
 nav[5].textContent = siteContent['nav']['nav-item-6']
 
-// let sab = document.createElement('a')
-// let chi = document.createElement('a')
-// sab.textContent = "Sable"
-// chi.textContent = "Childs"
-// nav[5].prepend(sab)
-// nav[6].appendChild(chi)
+
 
 nav.forEach(item => {item.style.color = 'green'})
 console.log(nav)
@@ -98,3 +93,13 @@ footer.textContent = siteContent['footer']['copyright']
 let midImg = document.querySelector('#middle-img')
 
 midImg.src = siteContent['main-content']['middle-img-src']
+
+let navi = document.querySelector('nav')
+let sab = document.createElement('nav1')
+let chi = document.createElement('nav2')
+
+sab.textContent = "Sable"
+chi.textContent = "Childs"
+
+navi.prepend(sab)
+navi.appendChild(chi)
